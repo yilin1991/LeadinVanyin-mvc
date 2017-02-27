@@ -1,0 +1,140 @@
+*{margin: 0;padding: 0;}
+html,body{height: 100%;font-family: "microsoft yahei";}
+a{text-decoration: none;}
+li{list-style: none;}
+
+
+.boxsizing{box-sizing: border-box;-webkit-box-sizing: border-box;-o-box-sizing:border-box;-moz-box-sizing: border-box;}
+
+.pagebody{width:100%;height: 100%;min-width: 1000px;min-height: 500px;}
+
+/*头部样式*/
+.pagebody .pageheader{width: 100%;height: 50px;background: #086b86;}
+.pagebody .pageheader a.logo{display: block;float: left;height: 100%;}
+.pagebody .pageheader a.logo img{display: block;height: 30px;margin: 10px 0 10px 15px;}
+.pagebody ul.toolbox{float: right;height: 100%;margin-right: 15px;}
+.pagebody ul.toolbox > li.msgbox{float: left;height: 100%;margin-left: 1px;}
+.pagebody ul.toolbox > li.msgbox>a{display: block;height: 100%;padding: 0 20px;line-height: 50px;color: #fff;}
+.pagebody ul.toolbox > li.msgbox>a i{display: block;float: left;font-size: 16px;margin-top: 17px;line-height: 16px;}
+.pagebody ul.toolbox > li.msgbox>a span{display: block;float: left; height: 20px;line-height: 20px;background: rgba(177,177,177,0.8);font-size: 12px;border-radius: 12px;padding: 0 5px;margin-top: 15px;margin-left: 5px;}
+.pagebody ul.toolbox > li:nth-child(1){background: #4b4b4b;}
+.pagebody ul.toolbox > li:nth-child(2){background: #892e65;}
+.pagebody ul.toolbox > li:nth-child(3){background: #2e8965;}
+.pagebody ul.toolbox > li:nth-child(4){background: #62a8d1;}
+.pagebody ul.toolbox > li.userbox{float: left;height: 100%;margin-left: 1px;position: relative;}
+.pagebody ul.toolbox > li.userbox a.usermsg{display: block;height: 100%;cursor: pointer;}
+.pagebody ul.toolbox > li.userbox a.usermsg img{display: block;float: left; width: 30px;height: 30px;border-radius: 50%;border: solid 2px #E7E7E7;overflow: hidden;margin-top: 10px;margin-left: 15px;}
+.pagebody ul.toolbox > li.userbox a.usermsg span{display: block;float: left; font-size: 14px;color: #FFFFFF;height: 100%;line-height: 15px;margin-left: 5px;}
+.pagebody  ul.toolbox li.userbox a.usermsg span small{display: block;margin-top: 10px;font-size: 12px;}
+.pagebody ul.toolbox > li.userbox a.usermsg i{float: left; display: block;font-size: 18px;margin:16px 15px 0 10px;color: #FFFFFF;}
+.pagebody ul.toolbox > li.userbox .usersetbox{position: absolute;width: 160px;/*height:121px;*/height:0; overflow: hidden; border: solid 1px #e7e7e7;background-color: #FFFFFF;right: 0;top: 50px;border-top: none;}
+.pagebody .usersetbox li{width: 100%;float: left;}
+.pagebody .usersetbox li a{display: block;width: 100%;height: 30px;line-height: 30px;color: #000;}
+.pagebody .usersetbox li a:hover{background-color: #e3d640;}
+.pagebody .usersetbox li a i{display: block;float: left;width: 20px;font-size: 18px;margin-top: 6px;margin-left: 25px;line-height: 18px;}
+.pagebody .usersetbox li a span{display: block;float:left; font-size: 14px;line-height: 20px;height: 20px;margin-top: 5px;margin-left: 12px;}
+.pagebody .usersetbox li:nth-child(1){margin-top: 5px;}
+.pagebody .usersetbox li:last-child{border-top: solid 1px #E7E7E7;margin-top: 10px;}
+.pagebody .usersetbox li:last-child a{margin: 7px 0 5px 0;}
+
+/*正文基本样式*/
+.pagebody .pagecontent{width:100%;height:100%;margin-top: -50px;padding-top: 50px;}
+.pagebody .pagecontent .pagemain{float: left;width: 100%;height: 100%;padding-left: 200px;overflow-y: auto;}
+
+/*正文头部样式*/
+.pagemain .maptop{display: block; width: 100%; height: 40px; background-color: #EDF6FA;line-height: 40px;font-size: 12px;}
+.pagemain .maptop span{display: inline-block;}
+.pagemain .maptop a{display: inline-block;color: #000000;}
+.pagemain .maptop a:hover{color: #3D96C9;}
+.pagemain .maptop span:nth-child(1){margin-left: 15px;}
+
+
+
+/*左侧导航样式*/
+.pagebody .pagecontent .pageleft{float: left; width: 200px;height: 100%;margin-left: -100%;border-right: solid 1px #E7E7E7;overflow-y: auto;}
+
+.pageleft .lefttop{width: 100%; height: 40px;background-color: #3d96c9;}
+.pageleft .lefttop img{width: 20px;height: 20px;float: left;display: block;margin-left: 20px;margin-top: 10px;}
+.pageleft .lefttop span{display: block;float: left;height: 100%;line-height: 38px;font-size: 16px;color: #FFFFFF;margin-left: 10px;}
+
+.pageleft .leftlistbox{display: table;width: 100%;}
+.pageleft .leftlistbox ul.leftlist{display: table;width: 100%;border-bottom: solid 1px #E7E7E7;}
+
+.pageleft .leftlistbox ul.leftlist li.title{width: 100%;height: 35px;background-color: #F0F9FD;}
+.pageleft .leftlistbox ul.leftlist li.title a{display: block;width: 100%;height: 100%;}
+
+.pageleft .leftlistbox ul.leftlist li.title a span{display: block;float: left;}
+.pageleft .leftlistbox ul.leftlist li.title a span:nth-child(1){width: 20px;height: 20px;margin-left: 25px;margin-top: 7px;}
+.pageleft .leftlistbox ul.leftlist li.title a span:nth-child(2){display: block;float: left;margin-left: 5px;height: 35px; line-height: 35px;color: #000000;font-size: 13px;}
+.pageleft .leftlistbox ul.leftlist li.title a span:nth-child(1) i{font-size: 16px;color: #6bb4d5;line-height: 18px;}
+
+.pageleft .leftlistbox ul.leftlist li.leftlink{width: 100%; height: 0;overflow: hidden;}
+.pageleft .leftlistbox ul.leftlist li.leftlink a{display: block;width: 100%;height: 30px;}
+.pageleft .leftlistbox ul.leftlist li.leftlink a span{display: block;float: left;}
+.pageleft .leftlistbox ul.leftlist li.leftlink a i{display: block;float: left;margin-left: 35px;font-size: 13px;height: 20px;line-height: 20px;margin-top: 5px;color: #000}
+.pageleft .leftlistbox ul.leftlist li.leftlink a span:nth-child(1){width: 3px;height: 100%;background-color: #FFFFFF;}
+.pageleft .leftlistbox ul.leftlist li.leftlink a span:nth-child(3){height: 100%;margin-left: 8px;line-height: 30px;font-size: 12px;color: #000000;}
+.pageleft .leftlistbox ul.leftlist li.leftlink a:hover span:nth-child(3){color: #3D96C9;}
+
+.pageleft .leftlistbox ul.leftlist li.leftlink a.active{background-color: #3EAFE0;}
+.pageleft .leftlistbox ul.leftlist li.leftlink a.active span:nth-child(1){background-color: #EA2020;color: #FFFFFF;}
+.pageleft .leftlistbox ul.leftlist li.leftlink a.active i{color: #FFFFFF;}
+.pageleft .leftlistbox ul.leftlist li.leftlink a.active span:nth-child(3){color: #FFFFFF;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
