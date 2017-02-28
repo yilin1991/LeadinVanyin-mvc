@@ -10,6 +10,12 @@ namespace Vanyin.Admin.App_Start
 
         public static void RegisterBundles(BundleCollection bundles)
         {
+            bundles.Add(new ScriptBundle("~/Scripts/validate").Include(
+                        "~/Scripts/jquery.validate*"));
+            bundles.Add(new ScriptBundle("~/Scripts/ajax").Include(
+                        "~/Scripts/jquery.unobtrusive*"));
+
+
             bundles.Add(new StyleBundle("~/Content/Login").Include(
                      "~/Content/login.css"));
             bundles.Add(new StyleBundle("~/Content/Style").Include(

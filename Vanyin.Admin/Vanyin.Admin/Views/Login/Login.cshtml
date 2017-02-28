@@ -1,4 +1,7 @@
 ﻿
+@model Vanyin.Admin.Models.LoginViewModel
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +16,7 @@
     <div id="loginHeader">
         <div class="loginHeaderLeft">
             <ul>
-                <li><img src="img/temp/login_small.png" /></li>
+                <li><img src="~/img/temp/login_small.png" /></li>
                 <li>欢迎登录网站后台管理界面</li>
             </ul>
         </div>
@@ -27,13 +30,13 @@
     </div>
     <div id="loginContent">
         <div class="loginContentLogo">
-            <img src="img/temp/loginlogo.png" />
+            <img src="~/img/temp/loginlogo.png" />
         </div>
         <div class="loginContentForm">
-            @using (Html.BeginForm())
+            @using (Ajax.BeginForm("Login", "Login", new AjaxOptions {OnSuccess= "show" },new { id= "commentForm" }))
             {
                 <div class="loginContentFormLeft">
-                    <img src="img/temp/Logo1.jpg" />
+                    <img src="~/img/temp/Logo1.jpg" />
                 </div>
                 <div class="loginContentFormRight">
                     <div class="loginContentForm_Title">
@@ -41,26 +44,29 @@
                     </div>
                     <div class="loginContentForm_Input">
                         <div class="loginContentForm_InputImg">
-                            <img src="img/user_ico.png" />
+                            <img src="~/img/user_ico.png" />
                         </div>
                         <div class="loginContentForm_InputText">
                             @*<input type="text" name="txtName" id="txtName" class="loginText" value="" placeholder="用户名" />*@
-                            @Html.TextBox("txtName", "", new { @class = "loginText", placeholder = "用户名" })
+                            @*@Html.TextBox("txtName", "", new { @class = "loginText", placeholder = "用户名" })*@
+                            @Html.TextBoxFor(model=>model.Accounts,new { @class= "loginText", placeholder="用户名" })
+                           
                         </div>
                     </div>
                     <div class="loginContentForm_Input">
                         <div class="loginContentForm_InputImg">
-                            <img src="img/user_pass.png" />
+                            <img src="~/img/user_pass.png" />
                         </div>
                         <div class="loginContentForm_InputText">
                             @*<input type="password" name="txtName" id="txtName" class="loginText" value="" placeholder="密码" />*@
-                            @Html.Password("txtPwd", "", new { @class = "loginText", placeholder = "密码" })
+                            @*@Html.Password("txtPwd", "", new { @class = "loginText", placeholder = "密码" })*@
+                            @Html.PasswordFor(model => model.Password, new { @class = "loginText", placeholder = "密码" })
                         </div>
                     </div>
                     <div class="loginContentForm_Btn">
                         <ul>
-                            <li><input type="button" id="btnLogin" value="登录" class="btnLogin" /></li>
-                            <li>用户名或密码输入不正确！！！</li>
+                            <li><input type="submit" id="btnLogin" value="登录" class="btnLogin" /></li>
+                            <li></li>
                         </ul>
                     </div>
                 </div>
@@ -70,5 +76,33 @@
     <div id="loginFooter">
         <p>版权所有 2015 上海领意文化传播有限公司</p>
     </div>
+
+    @Scripts.Render("~/Scripts/jQuery")
+    @Scripts.Render("~/Scripts/ajax")
+    @Scripts.Render("~/Scripts/validate")
+
+    @*<script src="~/Scripts/jquery-1.11.1.min.js"></script>*@
+    <script>
+
+        $(function () {
+            $("#commentForm").validate(
+                errorPlacement:function (error, element) {
+
+                    $(element).parents(".loginContentForm_Input").addClass("error");
+
+                }
+            )
+        })
+       
+
+
+        function show(msg) {
+
+            alert(msg)
+        }
+
+    </script>
+
+
 </body>
 </html>
